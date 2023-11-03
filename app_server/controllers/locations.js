@@ -7,7 +7,7 @@ const apiOptions = {
 };
 exports.apiOptions = apiOptions;
 if (process.env.NODE_ENV === 'production'){
-    apiOptions.server = 'https://loc8r-api-v5f3.onrender.com';
+    apiOptions.server = 'https://loc8r-api-cj98.onrender.com';
 }
 
 const requestOptions = {
