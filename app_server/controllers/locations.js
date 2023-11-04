@@ -5,7 +5,6 @@ const { response } = require("express");
 const apiOptions = {
     server: 'http://localhost:3000'
 };
-exports.apiOptions = apiOptions;
 if (process.env.NODE_ENV === 'production'){
     apiOptions.server = 'https://loc8r-api-cj98.onrender.com';
 }
