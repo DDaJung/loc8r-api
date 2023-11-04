@@ -39,6 +39,8 @@ const homelist = (req, res) => {
             maxDistance: 200000,
         },
     };
+    console.log(`${apiOptions.server}${path}`);
+    
     request(requestOptions, (err, response , body) => {
         let data = [];
         const { statusCode } = response;
