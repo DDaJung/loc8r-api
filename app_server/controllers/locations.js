@@ -1,12 +1,12 @@
 const Location = require("../../app_api/models/locations");
-const request = require("request");
-const { response } = require("express");
+const request = require('request');
+const { response } = require('express');
 
 const apiOptions = {
     server: 'http://localhost:3000'
 };
-if (process.env.NODE_ENV === 'production'){
-    apiOptions.server = 'https://loc8r-api-cj98.onrender.com';
+if (process.env.NODE_ENV === "production"){
+    apiOptions.server = "https://loc8r-api-cj98.onrender.com";
 }
 
 const requestOptions = {
