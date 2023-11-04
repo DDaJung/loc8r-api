@@ -39,11 +39,9 @@ const homelist = (req, res) => {
             maxDistance: 200000,
         },
     };
-    request(
-        requestOptions,
-        (err, response , body) => {
+    request(requestOptions, (err, response , body) => {
             let data = [];
-            const {statusCode } = response;
+            const { statusCode } = response;
             if (statusCode === 200 && body.length) {
                 data = body.map((item) => {
                     item.distance = formatDistance(item.distance);
