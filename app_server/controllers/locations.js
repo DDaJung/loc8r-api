@@ -1,5 +1,5 @@
 const Location = require("../../app_api/models/locations");
-const request = require('request');
+const request = require("request");
 const { response } = require('express');
 
 const apiOptions = {
