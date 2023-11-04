@@ -40,17 +40,16 @@ const homelist = (req, res) => {
         },
     };
     request(requestOptions, (err, response , body) => {
-            let data = [];
-            const { statusCode } = response;
-            if (statusCode === 200 && body.length) {
-                data = body.map((item) => {
-                    item.distance = formatDistance(item.distance);
-                    return item;
-                });
-            };
-            renderHomepage(req, res, body);
+        let data = [];
+        const { statusCode } = response;
+        if (statusCode === 200 && body.length) {
+            data = body.map((item) => {
+                item.distance = formatDistance(item.distance);
+                return item;
+            });
         }
-    );
+            renderHomepage(req, res, body);
+    });
 };
 
 const renderHomepage = function (req, res, responseBody) {
